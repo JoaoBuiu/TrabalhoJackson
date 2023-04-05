@@ -1,3 +1,20 @@
+<?php 
+include "./controller/UsuarioController.php";
+$usuario = new UsuarioController();
+
+    if(!empty($_POST['id'])){
+        $usuario->update($_POST);
+        header("location: UsuarioList.php");
+    }elseif(!empty($_POST)){
+      $usuario->salvar($_POST);
+      header("location: UsuarioList.php");
+    }
+
+    if(!empty($_GET['id'])){
+      $data = $usuario->buscar($_GET['id']);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,7 +70,7 @@
                     </ul>
                 </div>
                 <p class="description description-second">ou use seu email para se registrar:</p>
-                <form class="form" action="SuporteForm.php" method="POST">
+                <form class="form" action="UsuarioForm.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo !empty($data->id) ? $data->id: "" ?>"/><br>
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
@@ -62,12 +79,12 @@
                     
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="text" placeholder="Email" name="email" value= "<?php echo !empty($data->email) ? $data->email: "" ?>"/><br>
+                        <input type="text" placeholder="Telefone" name="telefone" value= "<?php echo !empty($data->telefone) ? $data->telefone: "" ?>"/><br>
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="text" placeholder="Senha" name="assunto" value= "<?php echo !empty($data->assunto) ? $data->assunto: "" ?>"/><br>
+                        <input type="text" placeholder="CPF" name="cpf" value= "<?php echo !empty($data->cpf) ? $data->cpf: "" ?>"/><br>
                     </label>
                     <button class="btn btn-second" type="submit" value="Salvar">Cadastrar</button>        
                 </form>

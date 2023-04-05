@@ -1,20 +1,20 @@
 <?php
-    include "./controller/FornecedorController.php";
+    include "./controller/UsuarioController.php";
 
     
-        $fornecedor = new FornecedorController();
+        $usuario = new UsuarioController();
         
 
         if(!empty($_GET['id'])){
-            $fornecedor->deletar($_GET['id']);
-            header("location: FornecedorList.php");
+            $usuario->deletar($_GET['id']);
+            header("location: UsuarioList.php");
         }
 
         if(!empty($_POST)){
-            $load = $fornecedor->pesquisar($_POST);
+            $load = $usuario->pesquisar($_POST);
         }
         else{
-            $load = $fornecedor->carregar();
+            $load = $usuario->carregar();
         }
 ?>
 
@@ -29,15 +29,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fornecedores | Bom Look</title>
+    <title>Supoorte | Bom Look</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./src/js/slider.js" defer></script>
     <script src="./src/js/snackbar.js" defer></script>
+    <script src="./src/js/pop.js" defer></script>
+
 
     <script
       src="https://kit.fontawesome.com/b5ad8d5d3f.js"
@@ -48,10 +49,12 @@
     <link rel="stylesheet" href="./src/styles/layout.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/snackbar.css" />
+    <link rel="stylesheet" href="./src/styles/pop.css" />
     <link rel="stylesheet" href="./src/styles/indexadm.css" />
+
   </head>
   <style>
-   #edit {
+    #edit {
       width: 2em;
       transition: transform 0.3s;
     }
@@ -231,44 +234,46 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-      <h1>Fornecedores Cadastrados</h1>
-      <form action="FornecedorList.php" method="post">
+        <h1>Página de usuario</h1>
+        <form action="SuporteList.php" method="post">
         <select name="campo">
-            <option value="id">Id</option>
+            <option value="id">ID</option>
             <option value="nome">Nome</option>
-            <option value="data">Data</option>
+            <option value="telefone">Telefone</option>
+            <option value="cpf">Cpf</option>
         </select>
         <input type="text" name="valor"/>
         <input type="submit" value="Buscar"/>
-        <a href="FornecedorForm.php">
+        <a href="UsuarioForm.php">
           <input type="button" value="Cadastrar" />
         </a>
 
+
     </form>
-        </div>
+      </div>
       <div class="card">
         <div id="myDIV">
           <table>
             <tr>
               <th>Id</th>
               <th>Nome</th>
-              <th>Contato</th>
-              <th>Assunto</th>
-              <th>Data</th>
-              <th>Cadastrar</th>
+              <th>Telefone</th>
+              <th>CPF</th>
+              <th>Editar</th>
               <th>Excluir</th>
             </tr>
             <tr>
             <?php
                 foreach($load as $item){
                     echo"<tr>
-                        <td>$item->id</td>
-                        <td>$item->nome</td>
-                        <td>$item->contato</td>
-                        <td>$item->assunto</td>
-                        <td>$item->data</td>
-                        <td id='dgrey'><a href='./FornecedorForm.php?id=$item->id'><img src='./public/icons/editar.svg' id='edit'/></a></td>
-                        <td id='dgrey'><a href='./FornecedorList.php?id=$item->id'onclick='return confirm(\"Deseja Excluir?\")'><img src='./public/icons/excluir.svg' id='excluir'/></a></td>
+                    <td>$item->id</td>
+                    <td>$item->nome</td>
+                    <td>$item->telefone</td>
+                    <td>$item->cpf</td>
+                    <td id='dgrey'><a href='./UsuarioForm.php?id=$item->id'><img src='./public/icons/editar.svg' id='edit'/></a></td>
+                    <td id='dgrey'><a href='./UsuarioList.php?id=$item->id'
+                    onclick='return confirm(\"Deseja Excluir?\")'
+                    ><img src='./public/icons/excluir.svg' id='edit'/></a></td>
                     </tr>";
                 }
             ?>
@@ -289,5 +294,9 @@ select:focus {
       <div></div>
     </footer>
     <div id="snackbar"></div>
+    <div class="pop"><h4>Escreva sua resposta:</h4><textarea placeholder="Resposta..">
+        
+    </textarea><img src="./public/icons/send.svg" id="send" alt="Eniar" onclick="activeSnackbar('Resposta enviada'); closePop()"></div>
+    <div class="modalwrapper"></div>
   </body>
 </html>

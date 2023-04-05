@@ -199,6 +199,7 @@ select:focus {
       <a href="./FornecedorList.php">Fornecedores</a><br>
         <a href="./ProdutoList.php">Estoque</a><br>
         <a href="./SuporteList.php">Suporte</a><br>
+        <a href="./UsuarioList.php">Usuarios</a><br>
       </div>
       <div>
         <nav>
@@ -206,7 +207,7 @@ select:focus {
         <a href="adm.html"><img src="./public/icons/adm.svg"></img> </a>
       
       <div class="dropdown-content3">
-          <a href="index.html">Sair</a>
+          <a href="UsuarioForm.php">Cadastrar</a>
         </div>
       </div>
   </nav>  <a href="index.php">

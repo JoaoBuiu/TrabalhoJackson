@@ -40,6 +40,7 @@
         <a href="ProdutoList.php">Estoque</a>
         <a href="FornecedorList.php">Fornecedores</a>
         <a href="suporteList.php">Suporte</a>
+        <a href="./UsuarioList.php">Usuarios</a><br>
       </div>
       <form class="search">
         <input type="text" placeholder="O que você procura?" /><button
@@ -55,7 +56,7 @@
           <div class="dropdown3">
             <a href="adm.html"><img src="./public/icons/adm.svg"/></a>
             <div class="dropdown-content3">
-              <a href="UsuarioForm.php">Logar</a>
+              <a href="UsuarioForm.php">Cadastrar</a>
             </div>
         </div>
   </nav>  <a href="index.html">
