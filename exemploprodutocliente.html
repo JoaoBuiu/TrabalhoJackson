@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./public/icons/LogoPronta.svg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Bom Look</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/js/slider.js" defer></script>
+    <script src="./src/js/snackbar.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/b5ad8d5d3f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/exemploproduto.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" />
+    <link rel="stylesheet" href="./src/styles/indexcliente.css" />
+  </head>
+  <body class="layout">
+    <header>
+        <a href="indexcliente.html">
+            <img
+              src="./public/icons/LogoPronta.svg"
+              alt="Bom Look Logo"
+              class="logo"
+          /></a>
+          <div>
+            <form class="search">
+              <input type="text" placeholder="O que você procura?" /><button
+                type="submit"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <nav>
+                <div class="dropdown3">
+              <a href="cliente.html"><img src="./public/icons/cliente.svg"></img> </a>
+            
+            <div class="dropdown-content3">
+                <a href="index.html">Sair</a>
+              </div>
+            </div>
+        </nav>  
+        <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
+          </div>
+    </header>
+    <div class="content">
+      <div class="container">
+        <img src="./public/products/SportMasc-Lacoste.jpg" alt="" />
+      </div>
+
+      <div class="aside">
+        <h1>Camiseta Lacoste Técnica Masculina</h1>
+        <h3>R$ 59,99</h3>
+        <span>Até 3 x <b>R$19,99</b> sem juros</span>
+        <h4>Selecionar tamanho</h4>
+        <div class="btn_tam">
+          <button>PP</button>
+          <button>P</button>
+          <button>M</button>
+          <button>G</button>
+          <button>GG</button>
+        </div>
+        <h4>Selecionar quantidade</h4>
+        <div>
+          <input id="qtd" type="number" placeholder="0" value="1" />
+        </div>
+        <button
+          class="btn_carrin"
+          onclick="activeSnackbar('Adicionado ao carrinho!', 'carrinhocliente.html')"
+        >
+          ADICIONAR AO CARRINHO &emsp; &rarr;
+        </button>
+        <div class="desc_prod">
+          <h3>Descrição</h3>
+          <span>REFERÊNCIA TH7618-21</span>
+          <h4>
+            Esta ousada camiseta Lacoste em jérsei técnico traz uma estampa
+            ultra dry na parte detrás da barra. Absolutamente inovadora.
+          </h4>
+          <li>Em material ultra dry</li>
+          <li>Mistura de jersey de algodão ultra-seco respirável</li>
+          <li>Costura decorativa</li>
+          <li>Crocodilo verde bordado no peito</li>
+          <li>O modelo mede 6'2" e veste tamanho 4</li>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div>
+        <p>Página feita por: Bernardo Augusto Picoli &emsp; MOD: V</p>
+      </div>
+      <div></div>
+    </footer>
+    <div id="snackbar"></div>
+  </body>
+</html>

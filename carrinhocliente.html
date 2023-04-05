@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./public/icons/LogoPronta.svg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Bom Look</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/js/slider.js" defer></script>
+    <script src="./src/js/snackbar.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/b5ad8d5d3f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" />
+    <link rel="stylesheet" href="./src/styles/carrinho.css" />
+    <link rel="stylesheet" href="./src/styles/indexcliente.css" />
+  </head>
+  <body class="layout">
+    <header>
+      <a href="indexcliente.html">
+        <img
+          src="./public/icons/LogoPronta.svg"
+          alt="Bom Look Logo"
+          class="logo"
+      /></a>
+      <div>
+        <form class="search">
+          <input type="text" placeholder="O que você procura?" /><button
+            type="submit"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <nav>
+            <div class="dropdown3">
+          <a href="cliente.html"><img src="./public/icons/cliente.svg"></img> </a>
+        
+        <div class="dropdown-content3">
+            <a href="index.html">Sair</a>
+          </div>
+        </div>
+    </nav>  
+    <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="product">
+        <h2 id="title">Este é o seu carrinho</h2>
+        <div class="card">
+          <img src="./public/products/SportLacoste.jpg" alt="" />
+          <div class="car_text">
+            <h2>Camiseta Lacoste Técnica Masculina</h2>
+            <h3>R$ 59,99</h3>
+            <p class="car_desc">em 3 x R$19,99 sem juros</p>
+          </div>
+          <div class="car_text">
+            <h1>Quantidade</h1>
+            <input type="number" value="1" />
+            <button id="log" onclick="activeSnackbar('Produto removido!')">Remover</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./public/products/CamisaLacoste.jpg" alt="" />
+          <div class="car_text">
+            <h2>Camiseta em Jérsei de Algodão Masculina</h2>
+            <h3>R$ 49,99</h3>
+            <p class="car_desc">em 3 x R$16,66 sem juros</p>
+          </div>
+          <div class="car_text">
+            <h1>Quantidade</h1>
+            <input type="number" value="1" />
+            <button id="log" onclick="activeSnackbar('Produto removido!')">Remover</button>
+          </div>
+        </div>
+      </div>
+      <div class="conclude">
+        <div class="card">
+        <h2>Concluir Compra</h2>
+        <div>
+        <h1>Resumo do Pedido</h1>
+        <div class="row">
+          <p class="car_desc">Camiseta Técnica.. </p>
+          <p class="car_desc">R$ 59,99</p>
+        </div>
+        <div class="row">
+          <p class="car_desc">Camiseta em Jérsei..</p>
+          <p class="car_desc">R$ 49,99</p>
+        </div>
+        <div class="row">
+            <div class="space"></div>
+          <p class="car_desc">Valor total: </p>
+          <p class="car_desc">R$ 109,98</p>
+        </div>
+      </div>
+      <a id="log" onclick="activeSnackbar('Compra realizada com sucesso!')">Concluir</button></a>
+      </div>
+    </div></div>
+    </div>
+    <footer>
+      <div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div>
+        <p>Página feita por: Giovanna Ritter Parisotto &emsp; MOD: V</p>
+      </div>
+      <div></div>
+    </footer>
+    <div id="snackbar"></div>
+  </body>
+</html>

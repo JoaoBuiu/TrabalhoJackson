@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./public/icons/LogoPronta.svg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Bom Look</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/js/slider.js" defer></script>
+    <script src="./src/js/snackbar.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/b5ad8d5d3f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" /> 
+    <link rel="stylesheet" href="./src/styles/indexcliente.css" />
+    <link rel="stylesheet" href="./src/styles/cliente.css"/>
+
+
+
+  </head>
+  <body class="layout">
+    <header>
+      <a href="indexcliente.html"><img
+        src="./public/icons/LogoPronta.svg"
+        alt="Bom Look Logo"
+        class="logo"
+    /></a>
+      <div>
+        <form class="search">
+          <input type="text" placeholder="O que você procura?" /><button
+            type="submit"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <nav>
+            <div class="dropdown3">
+          <a href="cliente.html"><img src="./public/icons/cliente.svg"></img> </a>
+        
+        <div class="dropdown-content3">
+            <a href="index.html">Sair</a>
+          </div>
+        </div>
+    </nav>  
+    <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <img src="./public/icons/cliente.svg" id="photo" />
+          <div class="text">
+            <h1>Cliente</h1><br/>
+            <h2 id="text2">Email: cliente@gmail.com<br/>
+              Nome Completo: José Augusto da Silva<br/>
+              Endereço: Avenida Fernando Machado, 886, 89802-232<br/>
+              CPF: 104.854.456-02<br/>
+              Telefone: (49) 99105-7576<br/>
+              <br/>
+              <b>Nós da Loja Bom Look agradecemos pela confiança e fidelidade!</b><br/>
+            </h2>
+          </div>
+        </div>
+        <div class="info">
+          <a href="clienteedit.html"><button id="log">Editar perfil</button></a>
+          <a href="historico.html"><button id="hist">Histórico de compras</button></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div>
+        <p>Página feita por: Luiz Gustavo Piuco Bazzotti &emsp; MOD: V</p>
+      </div>
+      <div></div>
+    </footer>
+    <div id="snackbar"></div>
+  </body>
+</html>

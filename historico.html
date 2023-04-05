@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./public/icons/LogoPronta.svg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histórico | Bom Look</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/js/slider.js" defer></script>
+    <script src="./src/js/snackbar.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/b5ad8d5d3f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" />
+    <link rel="stylesheet" href="./src/styles/indexcliente.css" />
+  </head>
+  <style>
+    #dgrey:hover {
+      cursor: pointer;
+      background-color: #4c4c4e;
+    }
+
+    #dgrey {
+      background-color: #3b3b3f;
+    }
+    .content {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+    table {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      border-collapse: collapse;
+      cursor: default;
+      border-radius: 0.3em;
+      border: 1px solid #505053;
+      text-indent: initial;
+      border-spacing: 2px;
+    }
+    th {
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+      background-color: #3b3b3f;
+      color: #fafafa;
+      padding-left: 2em;
+      padding-right: 2em;
+      display: table-cell;
+      vertical-align: inherit;
+      font-weight: bold;
+      text-align: -internal-center;
+      border: 1px solid #505053;
+    }
+    td {
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      display: table-cell;
+      vertical-align: inherit;
+      border: 1px solid #505053;
+    }
+    h1 {
+    color: var(--text);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-right: 2em;
+    margin-bottom: 0.5rem;
+    }
+    tr:hover {
+      background-color: #d6d4d49f;
+    }
+    #excluir {
+      width: 3rem;
+      transition: transform 0.3s;
+    }
+    #excluir:hover {
+      transform: scale(1.1);
+    }
+    #excluir:active {
+      transform: scale(1);
+    }
+    .content .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    }
+    .content input {
+    width: 10em;
+    padding: 0.3em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em 0 0 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", serif;
+    font-size: 13px;
+    border: 1px solid #f1f1f1;
+    font-weight: 600;
+    border: 1px solid var(--text);
+    }
+    select:not(:-internal-list-box) {
+    overflow: visible !important;
+    }
+    select {
+    margin-left: 2em;
+    width: 12em;
+    padding: 0.32em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+    }
+    select:hover {
+    outline: none;
+    border: 1px solid var(--text);
+    }
+
+    select:focus {
+    outline: none;
+    }
+    #search-ico {
+    width: 1.5rem;
+    }
+    #search-button {
+    border: 1px solid var(--text);
+    background-color: rgb(230, 227, 227);
+    border-radius: 0 0.3em 0.3em 0;
+    padding: 0.12em;
+    margin: 0em;
+    }
+  </style>
+
+  <body class="layout">
+    <header>
+      <a href="indexcliente.html"><img
+        src="./public/icons/LogoPronta.svg"
+        alt="Bom Look Logo"
+        class="logo"
+    /></a>
+    <div>
+      <form class="search">
+        <input type="text" placeholder="O que você procura?" /><button
+          type="submit"
+        >
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <nav>
+          <div class="dropdown3">
+        <a href="cliente.html"><img src="./public/icons/cliente.svg"></img> </a>
+      
+      <div class="dropdown-content3">
+          <a href="index.html">Sair</a>
+        </div>
+      </div>
+  </nav>  
+  <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
+    </div>
+    </header>
+    <div class="content">
+      <div class="search">
+        <h1>Histórico de compras</h1>
+        <input type="text" placeholder="Busca" />
+        <button id="search-button">
+          <img src="./public/icons/search.svg" id="search-ico" />
+        </button>
+        <select>
+          <option>Mais Recentes</option>
+          <option>Mais Caros</option>
+          <option>Mais Baratos</option>
+        </select>
+      </div>
+      <div class="card">
+        <div id="myDIV">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Compra</th>
+              <th>Data</th>
+              <th>Valor</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Camiseta Nike SB Masculina</td>
+              <td>14/03/2021</td>
+              <td>R$ 59,99</td>
+              <td>Entregue</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>Camiseta Essentials Slim Feminina</td>
+              <td>05/05/2021</td>
+              <td>R$ 69,99</td>
+              <td>Entregue</td>
+              
+            </tr>
+            <tr>
+              <td>001</td>
+              <td>Camiseta Glith Printed Masculina</td>
+              <td>23/06/2021</td>
+              <td>R$ 59,90</td>
+              <td>Cancelado</td>
+              
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Camiseta Glith Printed Masculina</td>
+                <td>30/08/2021</td>
+                <td>R$ 59,90</td>
+                <td>Entregue</td>
+                
+              </tr>
+            <tr>
+              <td>008</td>
+              <td>Camiseta Lacoste SPORT Tennis Feminina</td>
+              <td>07/11/2021</td>
+              <td>R$ 69,99</td>
+              <td>A caminho</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div>
+        <p>Página feita por: Giovanna Ritter Parisotto &emsp; MOD: V</p>
+      </div>
+      <div></div>
+    </footer>
+    <div id="snackbar"></div>
+  </body>
+</html>

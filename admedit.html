@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="shortcut icon"
+      href="./public/icons/LogoPronta.svg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Bom Look | ADM </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/js/slider.js" defer></script>
+    <script src="./src/js/snackbar.js" defer></script>
+
+    <script
+      src="https://kit.fontawesome.com/b5ad8d5d3f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/layout.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" /> 
+    <link rel="stylesheet" href="./src/styles/indexadm.css" />
+    <link rel="stylesheet" href="./src/styles/adm.css"/>
+
+
+
+  </head>
+  <body class="layout">
+    <header>
+        <div class="header_adm">
+            <a href="estoque.html">Estoque</a>
+            <a href="fornecedores.html">Fornecedores</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="suporte.html">Suporte</a>
+          </div>
+          <div>
+            <nav>
+              <div class="dropdown3">
+            <a href="adm.html"><img src="./public/icons/adm.svg"></img> </a>
+          
+          <div class="dropdown-content3">
+              <a href="index.html">Sair</a>
+            </div>
+          </div>
+      </nav>  <a href="indexadm.html">
+              <img
+                src="./public/icons/LogoPronta.svg"
+                alt="Bom Look Logo"
+                class="logo-adm"
+            /></a>
+          </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <img src="./public/icons/adm.svg" id="photo" />
+          <div class="text">
+            <h1>Administrador</h1><br/>
+            <h2 id="text2 edit">Email: <input type="text" placeholder="...@...com"><br/>
+              Nome Completo:<input type="text" placeholder="Seu nome..."> <br/>
+              Endereço: <input type="text" placeholder="Avenida...">, <input type="text" placeholder="000">, <input type="text" placeholder="0000-000"><br/>
+              CPF: <input type="text" placeholder="000-000-000-00"><br/>
+              Telefone: <input type="text" placeholder="(00) 00000-0000"><br/>
+              Adicionar foto:
+        <div class="btn_tam">
+          <button>+</button></div>
+              <b>Nós da Loja Bom Look agradecemos pela confiança e fidelidade!</b><br/>
+            </h2>
+          </div>
+        </div>
+        <div class="info">
+          <a href="adm.html"><button id="log">Cancelar</button></a>
+          <button id="hist" onclick="activeSnackbar('Alterações salvas!', 'adm.html')">Salvar</button></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div>
+        <p>/p>
+      </div>
+      <div></div>
+    </footer>
+    <div id="snackbar"></div>
+  </body>
+</html>
