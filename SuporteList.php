@@ -234,7 +234,7 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-        <h1>Página de suporte</h1>
+        <h1>Página de suporte</h1></br>
         <form action="SuporteList.php" method="post">
         <select name="campo">
             <option value="nome">Nome</option>

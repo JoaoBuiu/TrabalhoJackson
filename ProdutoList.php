@@ -220,7 +220,7 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-        <h1>Controle de Estoque</h1>
+        <h1>Controle de Estoque</h1></br>
         <form action="ProdutoList.php" method="post">
         <select name="campo">
             <option value="id">Id</option>

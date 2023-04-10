@@ -231,7 +231,7 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-      <h1>Fornecedores Cadastrados</h1>
+      <h1>Fornecedores Cadastrados</h1></br>
       <form action="FornecedorList.php" method="post">
         <select name="campo">
             <option value="id">Id</option>
@@ -255,7 +255,7 @@ select:focus {
               <th>Contato</th>
               <th>Assunto</th>
               <th>Data</th>
-              <th>Cadastrar</th>
+              <th>Editar</th>
               <th>Excluir</th>
             </tr>
             <tr>

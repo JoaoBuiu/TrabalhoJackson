@@ -60,6 +60,16 @@ INSERT INTO `suporte` (`id`, `nome`, `email`, `assunto`, `data`) VALUES
 	(1, 'eda', 'joao@gmail.com', 'Roupas', '2023-04-06'),
 	(2, 'dada', 'joao@gmail.com', 'Roupas', '2023-04-19');
 
+  -- Copiando estrutura para tabela db_trabalho.usuario
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) COLLATE utf8mb4_0900_bin DEFAULT NULL,
+  `cpf` varchar(100) COLLATE utf8mb4_0900_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_bin;
+
+-- Copiando dados para a tabela db_trabalho.produto: ~0 rows (aproximadamente)
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
